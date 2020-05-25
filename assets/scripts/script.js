@@ -13,4 +13,15 @@ let fibonacci = function (result, len) {
     }
 
      return result;
+
+};
+
+let fib2 = function fib2 (result, len) {
+  if (result.length >= len) {
+      return result;
+  }
+
+  result.push(result[result.length - 2] + result[result.length - 1])
+
+  return fib2(result, len);
 };
