@@ -1,27 +1,33 @@
-let fibonacci = function (result, len) {
-    let num1 = result[0],
-        num2 = result[1],
-        next,
-        cnt = 2;
+document.getElementById("input").addEventListener("click", function fibonacci (result, len) {
 
-    while (cnt < len) {
-        next = num1 + num2;
-        num1 = num2;
-        num2 = next;
-        result.push(next);
-        cnt++;
-    }
 
-     return result;
+    let input = document.getElementById("input");
+    let output = document.getElementById("output");
 
-};
 
-let fib2 = function fib2 (result, len) {
-  if (result.length >= len) {
-      return result;
-  }
+        let num1 = result[0],
+            num2 = result[1],
+            next,
+            cnt = 2;
 
-  result.push(result[result.length - 2] + result[result.length - 1])
+        while (cnt < len) {
+            next = num1 + num2;
+            num1 = num2;
+            num2 = next;
+            result.push(next);
+            cnt++;
+        }
 
-  return fib2(result, len);
-};
+
+
+
+
+
+    let select = fibonacci(result).select((input.value));
+
+    console.log(select);
+
+    return result;
+});
+
+
